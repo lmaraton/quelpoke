@@ -1,0 +1,27 @@
+# QuelPoké 🐱‍👤🔍
+
+**QuelPoké** est une application web qui génère un Pokémon en fonction du nom saisi par l'utilisateur. 🎮  
+Elle utilise un algorithme de hachage pour associer un nom à un Pokémon parmi les 151 premiers de la première génération.  
+
+## 🚀 Service rendu  
+- Transforme un **nom** en un **Pokémon unique**.  
+- Affiche un Pokémon en fonction d'un **algorithme de hachage**.  
+- Récupère le **nom du Pokémon** correspondant via l’API [PokéAPI](https://pokeapi.co/).  
+- Affiche le résultat sous forme d'une page web simple.  
+
+---
+
+## 🔧 Fonctionnement global  
+1. Un utilisateur accède à l'application via **un navigateur**.  
+2. Il saisit son **nom** dans l'URL :  
+
+http://localhost:8080/?name=Alice
+
+3. L’application :
+- Calcule un **ID Pokémon** unique en hachant le nom (`SHA-1` + modulo `151`).  
+- Récupère le **nom du Pokémon** via PokéAPI.  
+- Affiche une **page HTML** avec les informations générées.  
+
+4. Résultat affiché :  
+
+Bonjour Alice, votre Pokémon est Pikachu !
