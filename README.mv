@@ -17,6 +17,42 @@ Elle utilise un algorithme de hachage pour associer un nom à un Pokémon parmi 
 
 http://localhost:8080/?name=Alice
 
+Comment lancer l'appli  sur son poste :
+Avant de démarrer, assure-toi d'avoir :
+
+    Go installé (Télécharge ici si ce n'est pas encore fait)
+    Une connexion Internet (pour récupérer les données de l'API Pokémon)
+
+Pour vérifier si Go est bien installé, tape cette commande dans le terminal :
+
+go version
+
+Si Go est installé, tu verras une version du type :
+
+go version go1.21.3 darwin/arm64
+
+2️⃣ Cloner ou créer le projet
+
+Si tu as un dépôt GitHub, utilise :
+
+git clone https://github.com/votreusername/quelpoke.git
+cd quelpoke
+
+Sinon, crée un dossier manuellement :
+
+mkdir quelpoke && cd quelpoke
+
+3️⃣ Initialiser le projet Go
+
+go mod init github.com/votreusername/quelpoke
+
+Dans le dossier de ton projet, exécute :
+
+go run main.go
+
+Si tout fonctionne, tu verras ce message :
+
+starting quelpoke app on http://0.0.0.0:8080
 3. L’application :
 - Calcule un **ID Pokémon** unique en hachant le nom (`SHA-1` + modulo `151`).  
 - Récupère le **nom du Pokémon** via PokéAPI.  
